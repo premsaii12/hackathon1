@@ -1,0 +1,115 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #5f96c0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the login form */
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Form Heading */
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Input fields styling */
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+/* On focus, input border will change to primary color */
+input:focus {
+    border-color: #9b59b6;
+    outline: none;
+    background-color: #fdfdfd;
+}
+
+/* Login button styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #5989b6;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Button hover and active effects */
+button:hover {
+    background-color: #4469ad;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #3c6498;
+    transform: translateY(0);
+}
+
+/* Styling for the sign-up link */
+.login-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-footer a {
+    color: #596db6;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-footer a:hover {
+    color: #4454ad;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 400px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

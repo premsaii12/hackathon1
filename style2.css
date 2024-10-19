@@ -1,0 +1,88 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: beige;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the greeting and buttons */
+.dashboard-container {
+    text-align: center;
+}
+
+/* Greeting heading styling */
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button container layout */
+.button-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* General button styling */
+.dashboard-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #6c5ce7;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+}
+
+/* Hover and focus effects */
+.dashboard-button:hover {
+    background-color: #4834d4;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard-button:active {
+    background-color: #341f97;
+    transform: translateY(0);
+}
+
+/* Different button colors */
+#course-selection {
+    background-color: #0984e3;
+}
+
+#course-selection:hover {
+    background-color: #74b9ff;
+}
+
+#teaching-assignments {
+    background-color: #00b894;
+}
+
+#teaching-assignments:hover {
+    background-color: #55efc4;
+}
+
+#student-preferences {
+    background-color: #55a7e1;
+}
+
+#student-preferences:hover {
+    background-color: #f7a0fa;
+}

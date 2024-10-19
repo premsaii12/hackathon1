@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Theory Subjects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Heading styles */
+    h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 40px;
+      text-align: center;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    /* Dropdown container */
+    .dropdown-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    /* Styling for select dropdown */
+    select {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+      color: #333;
+      background-color: #fff;
+      border: 2px solid #a18cd1;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      appearance: none; /* Removes default arrow on some browsers */
+      background-image: url('https://cdn-icons-png.flaticon.com/512/32/32195.png');
+      background-repeat: no-repeat;
+      background-position: 95% center;
+      background-size: 15px;
+    }
+
+    /* Hover and focus effect on dropdowns */
+    select:hover, select:focus {
+      border-color: #fbc2eb;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Dropdown label styling */
+    label {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 500;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Style for the submit button */
+    .submit-btn {
+      padding: 15px 40px;
+      background-color: #f5576c;
+      color: white;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .submit-btn:hover {
+      background-color: #f06595;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    /* Responsive design for mobile */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 15px 0;
+      }
+
+      select {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select Theory Subjects</h1>
+
+  <div class="dropdown-container">
+    <!-- Dropdown for Theory Subject 1 -->
+    <label for="subject1">Theory Subject 1:</label>
+    <select id="subject1">
+      <option value="" disabled selected>Select a subject</option>
+      <!-- Empty options initially, you can populate them later -->
+      <option value="C">C</option>
+      <option value="C++">C++</option>
+      <option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="Javascript">Javascript</option>
+    </select>
+
+    <!-- Dropdown for Theory Subject 2 -->
+    <label for="subject2">Theory Subject 2:</label>
+    <select id="subject2">
+      <option value="" disabled selected>Select a subject</option>
+      <option value="C">C</option>
+      <option value="C++">C++</option>
+      <option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="Javascript">Javascript</option>
+    </select>
+
+    <!-- Dropdown for Theory Subject 3 -->
+    <label for="subject3">Theory Subject 3:</label>
+    <select id="subject3">
+      <option value="" disabled selected>Select a subject</option>
+      <option value="C">C</option>
+      <option value="C++">C++</option>
+      <option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="Javascript">Javascript</option>
+    </select>
+
+    <!-- Dropdown for Theory Subject 4 -->
+    <label for="subject4">Theory Subject 4:</label>
+    <select id="subject4">
+      <option value="" disabled selected>Select a subject</option>
+      <option value="C">C</option>
+      <option value="C++">C++</option>
+      <option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="Javascript">Javascript</option>
+    </select>
+
+    <!-- Submit Button -->
+    <button class="submit-btn" onclick="submitSelection()">Submit</button>
+  </div>
+
+  <script>
+    // Function to handle form submission
+    function submitSelection() {
+      const subject1 = document.getElementById('subject1').value;
+      const subject2 = document.getElementById('subject2').value;
+      const subject3 = document.getElementById('subject3').value;
+      const subject4 = document.getElementById('subject4').value;
+
+      if (subject1 && subject2 && subject3 && subject4) {
+        alert('Subjects selected: ' + [subject1, subject2, subject3, subject4].join(', '));
+        // Further logic for submission
+      } else {
+        alert('Please select all 4 subjects.');
+      }
+    }
+  </script>
+
+</body>
+</html>

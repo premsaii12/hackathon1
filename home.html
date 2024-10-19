@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Greeting Section -->
+        <h1 id="greeting">Hi, User!</h1>
+        
+        <!-- Buttons Section -->
+        <div class="button-container">
+            <button class="dashboard-button" id="course-selection" onclick="callme()">Course Selection</button>
+           <!-- <button class="dashboard-button" id="teaching-assignments">Teaching Assignments</button>-->
+            <!--<button class="dashboard-button" id="student-preferences">Student Preferences</button>-->
+        </div>
+    </div>
+
+    <!-- JavaScript to Insert User's Name -->
+    <script>
+        // Simulating the logged-in user's name
+        const userName = "John Doe"; // Replace this with actual logged-in user info
+
+        // Insert the user's name into the greeting
+        document.getElementById('greeting').innerText = `Hi, ${userName}!`;
+
+        function callme()
+        {
+            window.location.href='theory.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Selection</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Importing Poppins font */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #a0d2eb;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: rgb(21, 16, 16);
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Container for the buttons */
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+      margin: 0 auto;
+      gap: 30px;
+    }
+
+    /* Styling for the buttons */
+    .btn {
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      width: 250px;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      background-size: 200% 200%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button Hover Effect */
+    .btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Button for Theory Exams */
+    .btn-theory {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .btn-theory:hover {
+      background-position: right center;
+    }
+
+    /* Button for Lab Exams */
+    .btn-lab {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+
+    .btn-lab:hover {
+      background-position: right center;
+    }
+
+    /* Ripple effect on button click */
+    .btn::before {
+      content: "";
+      position: absolute;
+      width: 300%;
+      height: 300%;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.6s ease;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn:active::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Responsive layout for mobile devices */
+    @media (max-width: 768px) {
+      .button-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select Course Type</h1>
+
+  <div class="button-container">
+    <!-- Button for Theory Exams -->
+    <button class="btn btn-theory" onclick="redirectToPage1()">Subjects</button>
+
+    <!-- Button for Lab Exams -->
+    <button class="btn btn-lab" onclick="redirectToPage2()">Labs</button>
+  </div>
+
+  <script>
+    // Function to handle course selection
+    function redirectToPage1() {
+      window.location.href = 'theory.html'; // Replace 'anotherPage.html' with the actual HTML page you want to go to
+    }
+    function redirectToPage2() {
+      window.location.href = 'labs.html'; // Replace 'anotherPage.html' with the actual HTML page you want to go to
+    }
+  </script>
+
+</body>
+</html>
